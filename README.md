@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution on Frontend Mentor](https://your-solution-url.com)
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/interactive-rating-component-solution-TMRSojuUxv)
 - [live site URL](https://alaa-mekibes.github.io/interactive-rating-component-frontend-mentor)
 
 ## My process

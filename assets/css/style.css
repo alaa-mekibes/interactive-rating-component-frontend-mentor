@@ -146,7 +146,7 @@ body {
     .container {
         animation: none;
     }
-    button {
-        transition: none;
+    :root {
+        --transition: 0s;
     }
 }
