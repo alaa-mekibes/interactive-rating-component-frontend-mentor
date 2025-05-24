@@ -1,0 +1,152 @@
+:root {
+    --Orange-500: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-300: hsla(217, 12%, 63%, 0.11);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-900: hsl(213, 19%, 18%);
+    --Grey-930: hsl(212, 25%, 12%);
+    --Grey-950: hsl(216, 12%, 8%);
+    --Paragraph-size: .9375rem;
+    --fw-400: 400;
+    --fw-700: 700;
+    --transition: .2s;
+}
+body {
+    font-family: "Overpass", sans-serif;
+    line-height: 1.6;
+    background-color: var(--Grey-950);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.main_container {
+    flex: 1;
+}
+.main_container .container {
+    background: linear-gradient(to top, var(--Grey-930), var(--Grey-900));
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 30px;
+    padding: 3rem;
+    margin: 1rem;
+}
+.main_container .container .star img {
+    background-color: var(--Grey-300);
+    padding: 1rem;
+    border-radius: 50%;
+}
+.main_container .container .caption {
+    h1 {
+        color: var(--White);
+        font-weight: var(--fw-700);
+        margin-block-end: .75rem;
+    }
+    p {
+        color: var(--Grey-500);
+        font-size: var(--Paragraph-size);
+        font-weight: var(--fw-400);
+    }
+}
+.main_container .container .caption .choosing {
+    .numbers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin: 2rem auto;
+        button {
+            flex: 1;
+            all: unset;
+            color: var(--Grey-500);
+            background-color: var(--Grey-300);
+            width: clamp(2.75rem, 5vw, 3.5rem);
+            height: clamp(2.75rem, 5vw, 3.5rem);
+            text-align: center;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: var(--fw-700);
+            &:hover {
+                background-color: var(--Orange-500);
+                color: var(--Grey-950);
+            }
+        }
+        .selected {
+            background-color: var(--White);
+            color: var(--Grey-950);
+        }
+    }
+    .submit button {
+        all: unset;
+        display: block;
+        text-align: center;
+        background-color: var(--Orange-500);
+        width: 100%;
+        border-radius: 30px;
+        color: var(--Grey-950);
+        font-weight: var(--fw-700);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        padding: .75rem;
+        cursor: pointer;
+        transition: var(--transition);
+        &:hover {
+            background-color: var(--White);
+        }
+    }
+    .error {
+        --alertColor: hsl(0, 68%, 47%);
+        color: var(--alertColor);
+        font-weight: var(--fw-700);
+        text-align: center;
+        margin-block-start: 1rem;
+    }
+}
+
+/* Second Card */
+.thanks {
+    margin: auto;
+}
+.whatSelected {
+    background-color: var(--Grey-300);
+    font-size: var(--Paragraph-size);
+    color: var(--Orange-500);
+    font-weight: var(--fw-400);
+    padding: .75rem 1rem;
+    border-radius: 30px;
+    width: fit-content;
+    margin: auto;
+}
+.thanks {
+    color: var(--White);
+    font-weight: var(--fw-700);
+    margin-block-end: .5rem;
+}
+.message {
+    color: var(--Grey-500);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .container {
+        animation: none;
+    }
+    button {
+        transition: none;
+    }
+}
