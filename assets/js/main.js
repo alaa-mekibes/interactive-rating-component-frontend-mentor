@@ -1,6 +1,6 @@
 class inputVerification {
     constructor() {
-        this.selectedbtn = document.querySelectorAll(".choosing .numbers button");
+        this.selectedbtn = document.querySelectorAll(".choosing .numbers label");
         this.submit = document.querySelector(".submit button");
         this.selected = false;
         this.numberSelected;
