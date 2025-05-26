@@ -146,10 +146,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .container {
-        animation: none;
-    }
-    :root {
-        --transition: 0s;
-    }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
