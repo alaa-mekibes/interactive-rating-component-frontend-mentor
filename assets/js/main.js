@@ -16,15 +16,19 @@ class inputVerification {
             })});
     }
     submitNumber() {
+        const errorMSG = document.querySelector(".error");
+        const boxContainer = document.querySelector(".container");
         this.submit.addEventListener("click", _ => {
             if(this.selected === false) {
-                document.querySelector(".error").textContent = "You must select one number!";
-                document.querySelector(".error").setAttribute("aria-live", "assertive");
-                this.errorTimer();
+                errorMSG.textContent = "You must select one number!";
+                errorMSG.setAttribute("aria-live", "assertive");
+                setTimeout(() => {
+                if(errorMSG) errorMSG.textContent = "";
+                }, 3000);
                 return;
             }
             else {
-                document.querySelector(".container").innerHTML = `
+                boxContainer.innerHTML = `
             <div class="thanks" aria-hidden="true">
                 <img src="assets/images/illustration-thank-you.svg" alt="">
                 </div>
@@ -35,14 +39,9 @@ class inputVerification {
                 don't hesitate to get in touch!</p>
             </section>
                 `;
-                document.querySelector(".container").style.cssText = "text-align: center; animation: fade-in 1s";
+                boxContainer.style.cssText = "text-align: center; animation: fade-in 1s";
             }
         })
-    }
-    errorTimer() {
-        setTimeout(() => {
-            document.querySelector(".error").textContent = "";
-        }, 3000);
     }
 }
 
